@@ -57,7 +57,7 @@ function VulInfo()
 {
   // INFO :
   // Wanneer de JSON-file van een server komt(of in txt formaat is) moeten we deze omzetten naar een JSON-Object 
-
+  
   let JSONlessen;
   
   // Wijzigen van de inhoud
