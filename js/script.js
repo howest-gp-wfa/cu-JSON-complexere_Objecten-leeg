@@ -96,8 +96,13 @@ function VulInfo()
 {
   // INFO :
   // Wanneer de JSON-file van een server komt(of in txt formaat is) moeten we deze omzetten naar een JSON-Object 
+<<<<<<< HEAD
   //vangt de JSON objecten op na parsen
   let JSONlessen = JSON.parse(lessen);
+=======
+  
+  let JSONlessen;
+>>>>>>> d0ba386f548defd7ee2857dc7cc582fe26f8c2ac
   
   // Wijzigen van de inhoud
   JSONlessen.lesinhoud = "WFA";
