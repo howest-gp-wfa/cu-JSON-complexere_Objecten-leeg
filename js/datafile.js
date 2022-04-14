@@ -1,2 +1,2 @@
-var les = `{"lesinhoud":"Javascript", "module" : "WFA", "dag" : "maandag", "lokaal" : "K1.016", "gebouw" : 
-"BST1", "uren" : 4}`;
+const lesson = `{"subject":"Javascript", "module" : "WFA", "day" : "maandag", "room" : "K1.016", "building" : 
+"BST1", "hours" : 4}`;

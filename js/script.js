@@ -2,30 +2,28 @@
 
 window.addEventListener('load', Initieer);
 //globals
-var dataLessen;
-var divJSONFeedback;
-var divJSONAsString;
-var divJSONUitgebreid;
-var slcLocatie;
+let lessonsData;
+let divJSONFeedback, divJSONAsString, divJSONExtended;
+let slcLocation;
 
 
-async function Initieer() 
+function Initieer() 
 {
 	// DOM elementen ophalen
 	divJSONFeedback = document.querySelector("#divJSONFeedback");
-	divJSONUitgebreid = document.querySelector("#divJSONUitgebreid");
-	slcLocatie = document.querySelector("#slcLocatie");
+	divJSONExtended = document.querySelector("#divJSONExtended");
+	slcLocation = document.querySelector("#slcLocation");
 	divJSONAsString = document.querySelector("#divJSONAsString");
 
 	// Eventlisteners toevoegen
-	slcLocatie.addEventListener("change", ToonInhoudLessen);
+	slcLocation.addEventListener("change", showLessonsContent);
 	//JSON ophalen uit js file als text
-	dataLessen = JSON.parse(lessen);
-	//console.log(dataLessen);
+	lessonsData = JSON.parse(lessons);
+	console.log(lessonsData);
  	// Startup Functies na inladen DOM
-	VulInfo();
-	VulSelect();
- 	ToonInhoudLessen();
+	displayInfo();
+	fillSelectLocations();
+ 	showLessonsContent();
  }
 
 
@@ -34,7 +32,7 @@ async function Initieer()
  * function om de lijst met vakken
  * te vullen
  */
-function VulSelect()
+function fillSelectLocations()
 {
 	//loop over campussen en voeg toe aan select lijst
 	//for in om over object properties te gaan
@@ -44,7 +42,7 @@ function VulSelect()
 /**
  * fills the divs with lessen
  */
-function ToonInhoudLessen() 
+function showLessonsContent() 
 {
  
 	//check if array
@@ -54,13 +52,13 @@ function ToonInhoudLessen()
 
 /**
  * makes a new div with object content
- * @param {*} objectLes 
- * lesinhoud": "JavaScript",
+ * @param {*} objectLesson 
+ * subject": "JavaScript",
    "module": "WFB",
-   "dag": "maandag",
-   "lokaal": "K1.012
+   "day": "maandag",
+   "room": "K1.012
  */
-function CreateDivision(objectLes)
+function CreateDivision(objectLesson)
 {
     //create div with object props
 
@@ -68,7 +66,7 @@ function CreateDivision(objectLes)
 	
 }
 
-function VulInfo() 
+function displayInfo() 
 {
 	// INFO :
 	// Wanneer de JSON-file van een server komt(of in txt formaat is) 
