@@ -1,4 +1,4 @@
-var lessons = `{
+const lessons = `{
     "BST1": [
       {
         "subject": "JavaScript",
