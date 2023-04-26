@@ -1,13 +1,13 @@
 "use strict";
 
-window.addEventListener('load', Initieer);
+window.addEventListener('load', initialize);
 //globals
 let lessonsData;
 let divJSONFeedback, divJSONAsString, divJSONExtended;
 let slcLocation;
 
 
-function Initieer() 
+function initialize() 
 {
 	// DOM elementen ophalen
 	divJSONFeedback = document.querySelector("#divJSONFeedback");
